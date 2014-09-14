@@ -6,6 +6,9 @@ mongodb-java-springdata-openshift-casadocodigo
 MongoDB + Java com Spring Data + Bootstrap @ OpenShift
 --------------------------------------------------------
 
+
+
+* URL..........: https://seriados-boaglio2.rhcloud.com/
 * Database.....: *test*
 * Collection...: *seriados*
 
