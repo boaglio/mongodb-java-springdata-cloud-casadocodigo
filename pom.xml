@@ -9,21 +9,15 @@
 	<name>Seriados com Java + Spring Data</name>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.7</maven.compiler.source>
-		<maven.compiler.target>1.7</maven.compiler.target>
-		<spring.version>3.2.8.RELEASE</spring.version>
+	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	  <spring.version>4.3.2.RELEASE</spring.version>
+  	  <maven.compiler.source>1.7</maven.compiler.source>
+	  <maven.compiler.target>1.7</maven.compiler.target>
 	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.jboss.spec</groupId>
-			<artifactId>jboss-javaee-6.0</artifactId>
-			<version>1.0.0.Final</version>
-			<type>pom</type>
-			<scope>provided</scope>
-		</dependency>
 
-		<!-- dependencias do Spring 3 -->
+	<dependencies>
+
+		<!-- pring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -45,60 +39,34 @@
 			<version>${spring.version}</version>
 		</dependency>
 
-		<!-- mongodb java driver -->
+		<!-- MongoDB Java driver -->
 		<dependency>
 			<groupId>org.mongodb</groupId>
 			<artifactId>mongo-java-driver</artifactId>
-			<version>2.12.3</version>
+			<version>3.3.0</version>
 		</dependency>
 
-		<!-- Spring data mongodb -->
+		<!-- Spring Data MongoDB -->
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-mongodb</artifactId>
-			<version>1.5.4.RELEASE</version>
+			<version>1.9.2.RELEASE</version>
 		</dependency>
 
-		<dependency>
-			<groupId>cglib</groupId>
-			<artifactId>cglib</artifactId>
-			<version>2.2.2</version>
-		</dependency>
+		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
 		<dependency>
-			<groupId>servletapi</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.4-20040521</version>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
-	</dependencies>
 
-	<build>
-		<finalName>seriados</finalName>
-		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
-				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>2.2</version>
-				<configuration>
-				    <httpPort>8080</httpPort>
-					<path>/</path>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+	</dependencies>
 
 	<profiles>
 		<profile>
